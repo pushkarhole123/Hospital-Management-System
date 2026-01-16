@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Doctor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            width: 400px;
+            margin: 60px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .link-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .link-container a {
+            text-decoration: none;
+            color: white;
+            background-color: #2196F3;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        .link-container a:hover {
+            background-color: #0b7dda;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Add Doctor</h1>
+        <form action="AddServlet" method="get">
+            <label for="name">Doctor Name</label>
+            <input type="text" id="name" name="drName" placeholder="Enter Doctor Name" required>
+
+            <label for="dept">Department</label>
+            <input type="text" id="dept" name="dept" placeholder="Enter Department" required>
+
+            <label for="salary">Salary</label>
+            <input type="text" id="salary" name="salary" placeholder="Enter Salary" required>
+
+            <input type="submit" value="Add Doctor">
+        </form>
+    </div>
+
+    <div class="link-container">
+        <h2>View All Doctors</h2>
+        <a href="ShowServlet">Show Doctor List</a>
+    </div>
+
+</body>
+</html>
